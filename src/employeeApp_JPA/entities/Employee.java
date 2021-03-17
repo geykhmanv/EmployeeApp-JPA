@@ -8,6 +8,7 @@ public class Employee {
 
 	//private fields
 	@Id
+	//to auto-increment use @GeneratedValue
 	private Integer id;
 	@Basic
 	private String fname;
