@@ -4,6 +4,9 @@
 	
 	<!-- Classes/entities -->
 	<class>employeeApp_JPA.entities.Employee</class>
+	<class>employeeApp_JPA.entities.NonTeachingStaff</class>
+	<class>employeeApp_JPA.entities.Staff</class>
+	<class>employeeApp_JPA.entities.TeachingStaff</class>
 	
 	<properties>
 			<!-- 1 MariaDB Connection String  -->

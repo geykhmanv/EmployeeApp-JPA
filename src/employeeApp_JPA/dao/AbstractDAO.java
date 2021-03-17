@@ -6,16 +6,16 @@ import javax.persistence.Persistence;
 
 public class AbstractDAO {
 
-	private EntityManagerFactory emf = null;
-	protected EntityManager em = null;
-	private final String PERSISTENCE_UNIT_NAME = "employeeApp_JPA";
+	private static EntityManagerFactory emf = null;
+	protected static EntityManager em = null;
+	private final static String PERSISTENCE_UNIT_NAME = "employeeApp_JPA";
 	
-	protected void connectToDB() {
+	protected static void connectToDB() {
 		emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
 		em = emf.createEntityManager();
 	}//protected void connectToDB() 
 	
-	protected void dispose() {
+	protected static void dispose() {
 		em.close();
 		emf.close();
 	}//protected void dispose()
